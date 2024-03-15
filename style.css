@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+:root{
+--font-family1:"Montserrat", sans-serif;
+--font-family2:"Fraunces", sans-serif;
+--font-size:14px;
+--Dark-cyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+--Very-dark-blue: hsl(212, 21%, 14%);
+--Dark-grayish-blue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: var(--font-family1);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .card {
+    width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .card-image img {
+    width: 300px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 100%;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-content h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    font-family: var(--font-family2);
+    width: 190px;
+    color: var(--Very-dark-blue);
+  }
+  
+  .perfume{
+    letter-spacing: 2px;
+    color: var(--Dark-grayish-blue);
+  }
+  .card-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 14px;
+    /*word-spacing: 1px;*/
+    line-height: 25px;
+    width: 230px;
+    color: var(--Dark-grayish-blue);
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: var(--font-family1);
+    transition: background-color 0.3s ease;
+  }
+  button .cart{
+    margin-right: 10px;
+  }
+  
+  /*button:hover {
+    background-color: #27ae60;
+  }
+  */
+  .prix{
+    display: flex;
+    margin-top: 20px;
+  }
+  .prix h2{
+    color: var(--Dark-cyan);
+  }
+  .prix p{
+    margin-top: 20px;
+    margin-left: -50px;
+    margin-right: -150px;
+  }
+  @media screen and (max-width: 768px) {
+    .card {
+        max-width: 400px;
+    }
+    
+    .card-content h2 {
+        width: auto;
+    }
+
+    .prix p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .card {
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+    .card img{
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+}
